@@ -24,6 +24,6 @@ export const SOCIAL_URL = {
 };
 
 export const BRANDING_EMAIL = {
-  business: 'hello@imoogle.ai',
-  support: 'support@imoogle.ai',
+  business: 'info@imoogleai.xyz',
+  support: 'info@imoogleai.xyz',
 };

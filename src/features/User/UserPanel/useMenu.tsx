@@ -141,29 +141,13 @@ export const useMenu = () => {
       ),
     },
     {
-      children: [
-        {
-          icon: <Icon icon={Book} />,
-          key: 'docs',
-          label: (
-            <Link href={DOCUMENTS_REFER_URL} target={'_blank'}>
-              {t('userPanel.docs')}
-            </Link>
-          ),
-        },
-        {
-          icon: <Icon icon={Mail} />,
-          key: 'email',
-          label: (
-            <Link href={mailTo(BRANDING_EMAIL.support)} target={'_blank'}>
-              {t('userPanel.email')}
-            </Link>
-          ),
-        },
-      ],
-      icon: <Icon icon={LifeBuoy} />,
-      key: 'help',
-      label: t('userPanel.help'),
+      icon: <Icon icon={Mail} />,
+      key: 'email',
+      label: (
+        <Link href={mailTo(BRANDING_EMAIL.support)} target={'_blank'}>
+          {t('userPanel.email')}
+        </Link>
+      ),
     },
     {
       type: 'divider',
