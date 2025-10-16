@@ -39,11 +39,6 @@ const Page = async (props: DynamicLayoutProps) => {
       <StructuredData ld={ld} />
       <PageTitle />
       <TelemetryNotification mobile={isMobile} />
-      {!isDesktop && showChangelog && !hideDocs && !isMobile && (
-        <Suspense>
-          <Changelog />
-        </Suspense>
-      )}
     </>
   );
 };

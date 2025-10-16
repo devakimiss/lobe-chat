@@ -54,50 +54,6 @@ const Page = memo<{ mobile?: boolean }>(({ mobile }) => {
                 label: t('mail.support'),
                 value: 'support',
               },
-              {
-                href: mailTo(BRANDING_EMAIL.business),
-                label: t('mail.business'),
-                value: 'business',
-              },
-            ]}
-          />
-          <Divider style={{ marginBlock: 0 }} />
-          <div className={styles.title}>{t('information')}</div>
-          <AboutList
-            ItemRender={ItemCard}
-            grid
-            items={[
-              {
-                href: BLOG,
-                icon: SiRss,
-                label: t('blog'),
-                value: 'blog',
-              },
-              {
-                href: SOCIAL_URL.github,
-                icon: SiGithub,
-                label: 'GitHub',
-                value: 'feedback',
-              },
-              {
-                href: SOCIAL_URL.discord,
-                icon: SiDiscord,
-                label: 'Discord',
-                value: 'discord',
-              },
-              {
-                href: SOCIAL_URL.x,
-                icon: SiX as any,
-                label: 'X / Twitter',
-                value: 'x',
-              },
-
-              {
-                href: SOCIAL_URL.medium,
-                icon: SiMedium,
-                label: 'Medium',
-                value: 'medium',
-              },
             ]}
           />
           <Divider style={{ marginBlock: 0 }} />

@@ -18,8 +18,8 @@ describe('settingsSelectors', () => {
       expect(result).toEqual({
         animationMode: 'agile',
         fontSize: 12,
-        highlighterTheme: 'lobe-theme',
-        mermaidTheme: 'lobe-theme',
+        highlighterTheme: 'imoogle-theme',
+        mermaidTheme: 'imoogle-theme',
         transitionMode: 'fadeIn',
       });
     });
@@ -118,24 +118,24 @@ describe('settingsSelectors', () => {
   it('should return the highlighterTheme', () => {
     const s: UserState = merge(initialState, {
       settings: {
-        general: { highlighterTheme: 'lobe-theme' },
+        general: { highlighterTheme: 'imoogle-theme' },
       },
     });
 
     const result = userGeneralSettingsSelectors.highlighterTheme(s as UserStore);
 
-    expect(result).toBe('lobe-theme');
+    expect(result).toBe('imoogle-theme');
   });
 
   it('should return the mermaidTheme', () => {
     const s: UserState = merge(initialState, {
       settings: {
-        general: { mermaidTheme: 'lobe-theme' },
+        general: { mermaidTheme: 'imoogle-theme' },
       },
     });
 
     const result = userGeneralSettingsSelectors.mermaidTheme(s as UserStore);
 
-    expect(result).toBe('lobe-theme');
+    expect(result).toBe('imoogle-theme');
   });
 });
