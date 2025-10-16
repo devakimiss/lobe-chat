@@ -102,18 +102,6 @@ export const useCategory = () => {
       label: t('document'),
       onClick: () => window.open(DOCUMENTS, '__blank'),
     },
-    {
-      icon: Feather,
-      key: 'feedback',
-      label: t('feedback'),
-      onClick: () => window.open(FEEDBACK, '__blank'),
-    },
-    {
-      icon: FileClockIcon,
-      key: 'changelog',
-      label: t('changelog'),
-      onClick: () => router.push('/changelog'),
-    },
   ].filter(Boolean) as CellProps[];
 
   const mainItems = [
