@@ -1,21 +1,11 @@
-import {
-  Book,
-  CircleUserRound,
-  Cloudy,
-  Database,
-  Download,
-  Feather,
-  FileClockIcon,
-  Mail,
-  Settings2,
-} from 'lucide-react';
+import { CircleUserRound, Cloudy, Database, Download, Mail, Settings2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 
 import { CellProps } from '@/components/Cell';
 import { enableAuth } from '@/const/auth';
 import { BRANDING_EMAIL, LOBE_CHAT_CLOUD } from '@/const/branding';
-import { DOCUMENTS, FEEDBACK, OFFICIAL_URL, UTM_SOURCE, mailTo } from '@/const/url';
+import { OFFICIAL_URL, UTM_SOURCE, mailTo } from '@/const/url';
 import { isServerMode } from '@/const/version';
 import { usePWAInstall } from '@/hooks/usePWAInstall';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';

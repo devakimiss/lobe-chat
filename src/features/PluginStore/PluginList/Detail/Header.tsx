@@ -30,7 +30,7 @@ const useStyles = createStyles(({ css, token }) => {
 
 const Header = memo<{ inModal?: boolean; mobile?: boolean }>(({ mobile: isMobile, inModal }) => {
   const { author, identifier, createdAt, avatar, title, tags, description } = useDetailContext();
-  const { styles, theme } = useStyles();
+  const { styles } = useStyles();
   const { mobile = isMobile } = useResponsive();
   const { t } = useTranslation('discover');
 

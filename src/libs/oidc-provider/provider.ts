@@ -33,6 +33,11 @@ const getCookieKeys = () => {
  * @returns 配置好的 OIDC Provider 实例
  */
 export const createOIDCProvider = async (db: LobeChatDatabase): Promise<Provider> => {
+  // Skip OIDC provider creation during build time
+  if (process.env.NODE_ENV === 'production' && !process.env.VERCEL) {
+    throw new Error('OIDC provider cannot be created during build time');
+  }
+
   // 获取 JWKS
   const jwks = getJWKS();
 
@@ -253,7 +258,7 @@ export const createOIDCProvider = async (db: LobeChatDatabase): Promise<Provider
   };
 
   // 创建提供者实例
-  const baseUrl = urlJoin(appEnv.APP_URL!, '/oidc');
+  const baseUrl = appEnv.APP_URL ? urlJoin(appEnv.APP_URL, '/oidc') : 'http://localhost:3000/oidc';
 
   const provider = new Provider(baseUrl, configuration);
   provider.proxy = true;
